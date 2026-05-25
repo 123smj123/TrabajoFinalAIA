@@ -12,13 +12,13 @@
 # --------------------------------------------------------------------------
 # Autor(a) del trabajo:
 #
-# APELLIDOS:
-# NOMBRE: 
+# APELLIDOS: MORILLO VECINO
+# NOMBRE: ONESIMO
 #
 # Segundo(a) componente (si se trata de un grupo):
 #
-# APELLIDOS:
-# NOMBRE:
+# APELLIDOS: MUÑOZ JIMENEZ
+# NOMBRE: SANTIAGO
 # ----------------------------------------------------------------------------
 
 
@@ -82,6 +82,8 @@ import math
 import random
 import numpy as np
 
+random.seed(42)
+np.random.seed(42)
 
 
 # *****************************************
@@ -566,7 +568,7 @@ class ArbolDecision:
             return Nodo(distr=distr, clase=clase_may)
 
         mask_izq = X[:, mejor_atr] <= mejor_umbral
-        mask_der = ~mask_izq
+        mask_der = X[:, mejor_atr] > mejor_umbral
         nodo_izq = self._construye_arbol(X[mask_izq], y[mask_izq], prof + 1)
         nodo_der = self._construye_arbol(X[mask_der], y[mask_der], prof + 1)
         return Nodo(atributo=mejor_atr, umbral=mejor_umbral,
@@ -1059,7 +1061,7 @@ X_train_credito, X_test_credito, y_train_credito, y_test_credito = \
 # * X_train_adult, y_train_adult, X_test_adult, y_test_adult
 #   conteniendo el AdultDataset con los atributos numéricos:
 
-df_adult = pd.read_csv("datos_trabajo_aia/datos/adultDataset.csv", header=None)
+df_adult = pd.read_csv("datos_trabajo_aia/datos/adultDataset.csv", header=None, skiprows=1)
 X_adult = df_adult.iloc[:, :-1].values
 y_adult = df_adult.iloc[:, -1].values
 
@@ -1118,19 +1120,6 @@ y_train_dg = np.concatenate([y_entr_dg, y_val_dg])
 
 
 
-
-
-
-
-# -----------------------------
-# 4.2 AJUSTE DE HIPERPARÁMETROS     
-# -----------------------------
-
-# En nuestra implementación de RandomForest tenemos los siguientes 
-# hiperparámetros: 
-
-
-
 # -----------------------------
 # 4.2 AJUSTE DE HIPERPARÁMETROS     
 # -----------------------------
@@ -1161,13 +1150,113 @@ y_train_dg = np.concatenate([y_entr_dg, y_val_dg])
 
 # ----------------------------
 
+grid_rf = {
+     "n_arboles":                 [3, 5],
+     "prop_muestras":             [0.7],
+     "min_ejemplos_nodo_interior":[3, 5],
+     "max_prof":                  [5, 10],
+     "n_atrs":                    [3, 5],
+     "prop_umbral":               [0.8],
+}
+
+def grid_search_rf(X_entr, y_entr, X_val, y_val, grid=grid_rf):
+    claves = list(grid.keys())
+    valores = list(grid.values())
+
+    combinaciones = [{}]
+    for clave, vals in zip(claves, valores):
+        nuevas = []
+        for combo in combinaciones:
+            for v in vals:
+                nuevas.append({**combo, clave: v})
+        combinaciones = nuevas
+
+    mejor_rend = -1
+    mejor_params = None
+    for params in combinaciones:
+        rf = RandomForest(**params)
+        rf.entrena(X_entr, y_entr)
+        rend = rendimiento(rf, X_val, y_val)
+        if rend > mejor_rend:
+            mejor_rend = rend
+            mejor_params = params
+
+    X_ev = np.concatenate([X_entr, X_val])
+    y_ev = np.concatenate([y_entr, y_val])
+    clf_final = RandomForest(**mejor_params)
+    clf_final.entrena(X_ev, y_ev)
+    return mejor_params, mejor_rend, clf_final
+
+
+"""
+
+# ========= CALCULO DE HIPERPARÁMETROS =========
+
+X_train_imdb, X_val_imdb, y_train_imdb, y_val_imdb = particion_entr_prueba(X_train_imdb, y_train_imdb, test=0.2)
+X_train_credito, X_val_credito, y_train_credito, y_val_credito = particion_entr_prueba(X_train_credito, y_train_credito, test=0.2)
+X_train_adult, X_val_adult, y_train_adult, y_val_adult = particion_entr_prueba(X_train_adult, y_train_adult, test=0.2)
 
 
 
+# ========= IMDB =========
+
+best_params_imdb, best_val_imdb, RF_IMDB = grid_search_rf(
+    X_train_imdb, y_train_imdb, X_val_imdb, y_val_imdb)
+
+print("\n\nMEJORES HIPERPARÁMETROS Y RENDIMIENTOS EN VALIDACIÓN PARA DATASET IMDB:\n")
+print(f"Mejores hiperparámetros: {best_params_imdb}")
+print(f"Mejor rendimiento en validación: {best_val_imdb}")
+
+# Resultados obtenidos:
+# Mejores hiperparámetros: {'n_arboles': 5, 'prop_muestras': 0.7, 'min_ejemplos_nodo_interior': 5, 'max_prof': 10, 'n_atrs': 5, 'prop_umbral': 0.8}
+# Mejor rendimiento en validación: 0.5725
 
 
 
+# ========= CREDITO =========
 
+best_params_credito, best_val_credito, RF_CREDITO = grid_search_rf(
+    X_train_credito, y_train_credito, X_val_credito, y_val_credito)
+
+print("\n\nMEJORES HIPERPARÁMETROS Y RENDIMIENTOS EN VALIDACIÓN PARA DATASET CRÉDITO:\n")
+print(f"Mejores hiperparámetros: {best_params_credito}")
+print(f"Mejor rendimiento en validación: {best_val_credito}")
+
+# Resultados obtenidos:
+# Mejores hiperparámetros: {'n_arboles': 5, 'prop_muestras': 0.7, 'min_ejemplos_nodo_interior': 5, 'max_prof': 5, 'n_atrs': 5, 'prop_umbral': 0.8}
+# Mejor rendimiento en validación: 0.6407766990291263
+
+
+
+# ========= ADULT =========
+
+best_params_adult, best_val_adult, RF_ADULT = grid_search_rf(
+    X_train_adult, y_train_adult, X_val_adult, y_val_adult)
+
+print("\n\nMEJORES HIPERPARÁMETROS Y RENDIMIENTOS EN VALIDACIÓN PARA DATASET ADULT:\n")
+print(f"Mejores hiperparámetros: {best_params_adult}")
+print(f"Mejor rendimiento en validación: {best_val_adult}")
+
+# Resultados obtenidos:
+# Mejores hiperparámetros: {'n_arboles': 3, 'prop_muestras': 0.7, 'min_ejemplos_nodo_interior': 5, 'max_prof': 10, 'n_atrs': 5, 'prop_umbral': 0.8}
+# Mejor rendimiento en validación: 0.8385796545105566
+
+
+
+# ========= DIGIT =========
+
+best_params_dg, best_val_dg, RF_DG = grid_search_rf(
+    X_train_dg, y_train_dg, X_val_dg, y_val_dg)
+print("\n\nMEJORES HIPERPARÁMETROS Y RENDIMIENTOS EN VALIDACIÓN PARA DATASET DG:\n")
+print(f"Mejores hiperparámetros: {best_params_dg}")
+print(f"Mejor rendimiento en validación: {best_val_dg}")
+
+# Resultados obtenidos:
+# Mejores hiperparámetros: {'n_arboles': 3, 'prop_muestras': 0.7, 'min_ejemplos_nodo_interior': 5, 'max_prof': 5, 'n_atrs': 5, 'prop_umbral': 0.8}
+# Mejor rendimiento en validación: 0.319
+
+
+"""
 
 
 
@@ -1203,25 +1292,115 @@ y_train_dg = np.concatenate([y_entr_dg, y_val_dg])
 
 # *********** DESCOMENTAR A PARTIR DE AQUÍ
 
-# print("************ PRUEBAS EJERCICIO 1:")
-# print("**********************************\n")
-# Xe_votos,Xp_votos,ye_votos,yp_votos=particion_entr_prueba(X_votos,y_votos,test=1/3)
-# print("Partición votos: ",y_votos.shape[0],ye_votos.shape[0],yp_votos.shape[0])
-# print("Proporción original en votos: ",np.unique(y_votos,return_counts=True))
-# print("Estratificación entrenamiento en votos: ",np.unique(ye_votos,return_counts=True))
-# print("Estratificación prueba en votos: ",np.unique(yp_votos,return_counts=True))
-# print("\n")
+print("************ PRUEBAS EJERCICIO 1:")
+print("**********************************\n")
 
-# Xev_cancer,Xp_cancer,yev_cancer,yp_cancer=particion_entr_prueba(X_cancer,y_cancer,test=0.2)
-# print("Proporción original en cáncer: ", np.unique(y_cancer,return_counts=True))
-# print("Estratificación entr-val en cáncer: ",np.unique(yev_cancer,return_counts=True))
-# print("Estratificación prueba en cáncer: ",np.unique(yp_cancer,return_counts=True))
-# Xe_cancer,Xv_cancer,ye_cancer,yv_cancer=particion_entr_prueba(Xev_cancer,yev_cancer,test=0.2)
-# print("Estratificación entrenamiento cáncer: ", np.unique(ye_cancer,return_counts=True))
-# print("Estratificación validación cáncer: ",np.unique(yv_cancer,return_counts=True))
-# print("\n")
+Xe_votos,Xp_votos,ye_votos,yp_votos=particion_entr_prueba(X_votos,y_votos,test=1/3)
+print("Partición votos: ",y_votos.shape[0],ye_votos.shape[0],yp_votos.shape[0])
+print("Proporción original en votos: ",np.unique(y_votos,return_counts=True))
+print("Estratificación entrenamiento en votos: ",np.unique(ye_votos,return_counts=True))
+print("Estratificación prueba en votos: ",np.unique(yp_votos,return_counts=True))
+print("\n")
 
-# Xe_credito,Xp_credito,ye_credito,yp_credito=particion_entr_prueba(X_credito,y_credito,test=0.4)
-# print("Estratificación entrenamiento crédito: ",np.unique(ye_credito,return_counts=True))
-# print("Estratificación prueba crédito: ",np.unique(yp_credito,return_counts=True))
-# print("\n\n\n"... (Tiempo restante: 5 KB)
+Xev_cancer,Xp_cancer,yev_cancer,yp_cancer=particion_entr_prueba(X_cancer,y_cancer,test=0.2)
+print("Proporción original en cáncer: ", np.unique(y_cancer,return_counts=True))
+print("Estratificación entr-val en cáncer: ",np.unique(yev_cancer,return_counts=True))
+print("Estratificación prueba en cáncer: ",np.unique(yp_cancer,return_counts=True))
+
+Xe_cancer,Xv_cancer,ye_cancer,yv_cancer=particion_entr_prueba(Xev_cancer,yev_cancer,test=0.2)
+print("Estratificación entrenamiento cáncer: ", np.unique(ye_cancer,return_counts=True))
+print("Estratificación validación cáncer: ",np.unique(yv_cancer,return_counts=True))
+print("\n")
+
+Xe_credito,Xp_credito,ye_credito,yp_credito=particion_entr_prueba(X_credito,y_credito,test=0.4)
+print("Estratificación entrenamiento crédito: ",np.unique(ye_credito,return_counts=True))
+print("Estratificación prueba crédito: ",np.unique(yp_credito,return_counts=True))
+print("\n\n\n")
+
+
+print("************ PRUEBAS EJERCICIO 2:")
+print("**********************************\n")
+
+clf_titanic = ArbolDecision(max_prof=3,min_ejemplos_nodo_interior=5,n_atrs=3)
+clf_titanic.entrena(X_train_titanic, y_train_titanic)
+clf_titanic.imprime_arbol(["Pclass", "Mujer", "Edad"],"Partido")
+rend_train_titanic = rendimiento(clf_titanic,X_train_titanic,y_train_titanic)
+rend_test_titanic = rendimiento(clf_titanic,X_test_titanic,y_test_titanic)
+print(f"****** Rendimiento DT titanic train: {rend_train_titanic}")
+print(f"****** Rendimiento DT titanic test: {rend_test_titanic}\n\n\n\n ")
+
+
+clf_votos = ArbolDecision(min_ejemplos_nodo_interior=3,max_prof=5,n_atrs=16)
+clf_votos.entrena(Xe_votos, ye_votos)
+nombre_atrs_votos=[f"Votación {i}" for i in range(1,17)]
+clf_votos.imprime_arbol(nombre_atrs_votos,"Partido")
+rend_train_votos = rendimiento(clf_votos,Xe_votos,ye_votos)
+rend_test_votos = rendimiento(clf_votos,Xp_votos,yp_votos)
+print(f"****** Rendimiento DT votos en train: {rend_train_votos}")
+print(f"****** Rendimiento DT votos en test:  {rend_test_votos}\n\n\n\n")
+
+X_train_iris, X_test_iris, y_train_iris, y_test_iris = particion_entr_prueba(X_iris, y_iris, test=0.2)
+clf_iris = ArbolDecision(max_prof=3,n_atrs=4)
+clf_iris.entrena(X_train_iris, y_train_iris)
+clf_iris.imprime_arbol(["Long. Sépalo", "Anch. Sépalo", "Long. Pétalo", "Anch. Pétalo"],"Clase")
+rend_train_iris = rendimiento(clf_iris,X_train_iris,y_train_iris)
+rend_test_iris = rendimiento(clf_iris,X_test_iris,y_test_iris)
+print(f"********************* Rendimiento DT iris train: {rend_train_iris}")
+print(f"********************* Rendimiento DT iris test: {rend_test_iris}\n\n\n\n ")
+
+
+clf_cancer = ArbolDecision(min_ejemplos_nodo_interior=3,max_prof=10,n_atrs=15)
+clf_cancer.entrena(Xev_cancer, yev_cancer)
+nombre_atrs_cancer=['mean radius', 'mean texture', 'mean perimeter', 'mean area',
+        'mean smoothness', 'mean compactness', 'mean concavity',
+        'mean concave points', 'mean symmetry', 'mean fractal dimension',
+        'radius error', 'texture error', 'perimeter error', 'area error',
+        'smoothness error', 'compactness error', 'concavity error',
+        'concave points error', 'symmetry error',
+        'fractal dimension error', 'worst radius', 'worst texture',
+        'worst perimeter', 'worst area', 'worst smoothness',
+        'worst compactness', 'worst concavity', 'worst concave points',
+        'worst symmetry', 'worst fractal dimension']
+clf_cancer.imprime_arbol(nombre_atrs_cancer,"Es benigno")
+rend_train_cancer = rendimiento(clf_cancer,Xev_cancer,yev_cancer)
+rend_test_cancer = rendimiento(clf_cancer,Xp_cancer,yp_cancer)
+print(f"***** Rendimiento DT cancer en train: {rend_train_cancer}")
+print(f"***** Rendimiento DT cancer en test: {rend_test_cancer}\n\n\n")
+
+
+print("************ RENDIMIENTOS FINALES RANDOM FOREST")
+print("************************************************\n")
+
+
+print("==== MEJOR RENDIMIENTO RANDOM FOREST SOBRE IMDB:")
+RF_IMDB=RandomForest(n_arboles=5, prop_muestras=0.7, min_ejemplos_nodo_interior=5, max_prof=10, n_atrs=5, prop_umbral=0.8)
+RF_IMDB.entrena(X_train_imdb,y_train_imdb) 
+print("Rendimiento RF entrenamiento sobre imdb: ",rendimiento(RF_IMDB,X_train_imdb,y_train_imdb))
+print("Rendimiento RF test sobre imdb: ",rendimiento(RF_IMDB,X_test_imdb,y_test_imdb))
+print("\n")
+
+
+print("==== MEJOR RENDIMIENTO RANDOM FOREST SOBRE CRÉDITO:")
+
+RF_CREDITO=RandomForest(n_arboles=5, prop_muestras=0.7, min_ejemplos_nodo_interior=5, max_prof=5, n_atrs=5, prop_umbral=0.8)
+RF_CREDITO.entrena(X_train_credito,y_train_credito) 
+print("Rendimiento RF entrenamiento sobre crédito: ",rendimiento(RF_CREDITO,X_train_credito,y_train_credito))
+print("Rendimiento RF  test sobre crédito: ",rendimiento(RF_CREDITO,X_test_credito,y_test_credito))
+print("\n")
+
+
+print("==== MEJOR RENDIMIENTO RF SOBRE ADULT:")
+
+RF_ADULT=RandomForest(n_arboles=3, prop_muestras=0.7, min_ejemplos_nodo_interior=5, max_prof=10, n_atrs=5, prop_umbral=0.8)
+RF_ADULT.entrena(X_train_adult,y_train_adult) 
+print("Rendimiento RF  entrenamiento sobre adult: ",rendimiento(RF_ADULT,X_train_adult,y_train_adult))
+print("Rendimiento RF  test sobre adult: ",rendimiento(RF_ADULT,X_test_adult,y_test_adult))
+print("\n")
+
+
+print("==== MEJOR RENDIMIENTO RL SOBRE DIGITOS:")
+RF_DG=RandomForest(n_arboles=3, prop_muestras=0.7, min_ejemplos_nodo_interior=5, max_prof=5, n_atrs=5, prop_umbral=0.8)
+RF_DG.entrena(X_entr_dg,y_entr_dg)
+print("Rendimiento RF entrenamiento sobre dígitos: ",rendimiento(RF_DG,X_entr_dg,y_entr_dg))
+print("Rendimiento RF validación sobre dígitos: ",rendimiento(RF_DG,X_val_dg,y_val_dg))
+print("Rendimiento RF test sobre dígitos: ",rendimiento(RF_DG,X_test_dg,y_test_dg))
