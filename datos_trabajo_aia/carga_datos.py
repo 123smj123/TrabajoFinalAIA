@@ -8,10 +8,7 @@ Created on Sat May 16 11:28:40 2020
 # CONJUNTOS DE DATOS A USAR EN EL TRABAJO DE LA ASIGNATURA "AMPLIACIÓN DE 
 # INTELIGENCIA ARTIFICIAL"
 
-<<<<<<< HEAD
-=======
 import os
->>>>>>> da3d97db46aa673ad7472271fff72819cd9d27b1
 import numpy as np
 
 
@@ -19,11 +16,7 @@ import numpy as np
 
 # CONCESIÓN DE UN PRÉSTAMO
 
-<<<<<<< HEAD
-from datos import credito
-=======
 from .datos import credito
->>>>>>> da3d97db46aa673ad7472271fff72819cd9d27b1
 
 X_credito=np.array([d[:-1] for d in credito.datos_con_clas])
 y_credito=np.array([d[-1] for d in credito.datos_con_clas])
@@ -43,11 +36,7 @@ y_iris=iris.target
 
 # VOTOS EN EL CONGRESO USA
 
-<<<<<<< HEAD
-from datos import votos
-=======
 from .datos import votos
->>>>>>> da3d97db46aa673ad7472271fff72819cd9d27b1
 X_votos=votos.datos
 y_votos=votos.clasif
 
@@ -56,11 +45,7 @@ y_votos=votos.clasif
 
 # TITANIC
 
-<<<<<<< HEAD
-from datos.titanic import * 
-=======
 from .datos.titanic import * 
->>>>>>> da3d97db46aa673ad7472271fff72819cd9d27b1
 
 
 
@@ -113,18 +98,11 @@ y_cancer=cancer.target
 #np.save("datos/imdb_sentiment/y_train_text.npy",y_train)
 #np.save("datos/imdb_sentiment/y_test_text.npy",y_test)
 
-<<<<<<< HEAD
-X_train_imdb=np.load("datos/imdb_sentiment/vect_train_text.npy")
-X_test_imdb=np.load("datos/imdb_sentiment/vect_test_text.npy")
-y_train_imdb=np.load("datos/imdb_sentiment/y_train_text.npy")
-y_test_imdb=np.load("datos/imdb_sentiment/y_test_text.npy")
-=======
 _imdb_dir = os.path.join(os.path.dirname(__file__), 'datos', 'imdb_sentiment')
 X_train_imdb=np.load(os.path.join(_imdb_dir, "vect_train_text.npy"))
 X_test_imdb=np.load(os.path.join(_imdb_dir, "vect_test_text.npy"))
 y_train_imdb=np.load(os.path.join(_imdb_dir, "y_train_text.npy"))
 y_test_imdb=np.load(os.path.join(_imdb_dir, "y_test_text.npy"))
->>>>>>> da3d97db46aa673ad7472271fff72819cd9d27b1
 
 # ----------------------------------------------------------------
 
