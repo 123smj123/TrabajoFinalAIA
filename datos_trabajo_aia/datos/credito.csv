@@ -1,0 +1,651 @@
+Tipo de empleo,Productos contratados,Propiedades inmobiliarias,Número de hijos,Estado civil,Ingresos,Concesión
+jubilado,0,4,1,soltero,51990,estudiar
+funcionario,6,5,1,viudo,13924,no conceder
+,2,4,1,divorciado,16963,estudiar
+funcionario,4,5,5,divorciado,59882,conceder
+funcionario,1,2,2,soltero,74161,conceder
+parado,0,2,4,divorciado,85063,conceder
+funcionario,0,3,1,viudo,58705,conceder
+jubilado,0,2,2,divorciado,79804,estudiar
+funcionario,0,3,1,soltero,19158,estudiar
+funcionario,1,5,0,divorciado,73556,conceder
+parado,3,3,1,casado,15968,estudiar
+funcionario,0,3,0,viudo,16665,estudiar
+funcionario,1,4,1,divorciado,33694,conceder
+,2,3,1,divorciado,,conceder
+laboral,1,2,2,soltero,0,no conceder
+jubilado,3,3,2,divorciado,24534,no conceder
+jubilado,4,4,1,casado,35844,no conceder
+,3,4,1,soltero,21242,conceder
+jubilado,1,3,1,soltero,39121,no conceder
+funcionario,1,3,4,casado,75729,conceder
+laboral,1,5,0,divorciado,34049,conceder
+jubilado,0,2,0,divorciado,33775,estudiar
+laboral,1,4,2,soltero,35119,no conceder
+parado,1,3,3,soltero,0,conceder
+laboral,4,7,0,,60678,estudiar
+laboral,3,3,1,viudo,13255,estudiar
+funcionario,0,6,0,soltero,21772,conceder
+funcionario,0,3,2,soltero,,conceder
+laboral,1,4,1,divorciado,68498,estudiar
+,3,3,0,soltero,62278,estudiar
+funcionario,0,3,0,soltero,41868,conceder
+jubilado,3,2,1,casado,51337,estudiar
+laboral,2,6,0,soltero,43160,estudiar
+jubilado,1,3,2,divorciado,18293,estudiar
+parado,1,5,1,divorciado,33612,estudiar
+jubilado,1,5,0,soltero,24388,conceder
+jubilado,0,3,0,casado,12189,estudiar
+jubilado,1,2,0,casado,16303,conceder
+laboral,0,3,1,casado,84864,conceder
+jubilado,1,3,1,soltero,15944,no conceder
+jubilado,0,2,1,viudo,76745,estudiar
+jubilado,2,3,1,soltero,62607,estudiar
+funcionario,0,2,1,casado,20088,conceder
+parado,1,2,4,viudo,12365,no conceder
+jubilado,0,3,1,casado,69998,estudiar
+laboral,1,2,0,viudo,54584,conceder
+funcionario,2,2,0,viudo,75673,conceder
+parado,2,7,0,viudo,42721,conceder
+laboral,0,6,1,,33833,estudiar
+parado,0,2,1,casado,13069,no conceder
+funcionario,0,4,1,divorciado,81984,conceder
+funcionario,1,3,2,divorciado,32262,estudiar
+jubilado,1,3,0,soltero,19462,no conceder
+laboral,0,4,0,viudo,38833,estudiar
+parado,0,3,2,casado,20035,estudiar
+jubilado,1,2,3,viudo,66015,estudiar
+funcionario,0,2,1,soltero,76244,conceder
+jubilado,6,3,1,soltero,87732,estudiar
+jubilado,7,7,1,casado,27562,no conceder
+jubilado,3,5,1,viudo,22030,no conceder
+parado,0,2,0,viudo,27762,conceder
+parado,2,3,0,divorciado,45900,conceder
+parado,0,3,3,viudo,31150,estudiar
+funcionario,0,2,4,viudo,,conceder
+jubilado,0,2,2,soltero,34974,no conceder
+parado,2,6,1,soltero,24991,no conceder
+funcionario,0,2,0,soltero,64804,conceder
+laboral,1,5,1,soltero,14084,no conceder
+parado,2,3,2,casado,14506,no conceder
+parado,7,4,1,viudo,32731,estudiar
+laboral,1,2,0,divorciado,85526,conceder
+parado,0,4,1,casado,50623,estudiar
+laboral,0,2,2,soltero,0,no conceder
+parado,6,3,2,viudo,0,no conceder
+funcionario,1,4,0,divorciado,16381,no conceder
+,2,2,1,casado,38078,conceder
+funcionario,4,3,0,casado,63766,conceder
+parado,1,3,1,soltero,0,no conceder
+jubilado,2,2,2,viudo,72148,estudiar
+jubilado,1,2,2,,67592,estudiar
+jubilado,0,5,0,viudo,14951,no conceder
+jubilado,0,2,0,soltero,20138,no conceder
+parado,1,3,3,soltero,0,no conceder
+parado,0,4,0,casado,85166,estudiar
+jubilado,0,3,1,soltero,34225,no conceder
+laboral,1,2,1,casado,17161,no conceder
+laboral,2,2,3,soltero,15112,estudiar
+parado,0,2,0,soltero,,no conceder
+laboral,0,2,1,viudo,69940,conceder
+funcionario,2,3,1,casado,72167,conceder
+laboral,2,2,0,divorciado,13648,estudiar
+parado,2,2,2,soltero,70719,estudiar
+laboral,0,5,1,soltero,70043,conceder
+laboral,1,5,2,soltero,76471,conceder
+laboral,1,3,0,viudo,17869,no conceder
+jubilado,1,3,1,viudo,15085,no conceder
+jubilado,1,4,0,divorciado,16807,no conceder
+jubilado,1,4,1,divorciado,76341,estudiar
+jubilado,1,3,1,casado,49250,estudiar
+jubilado,0,2,2,soltero,74429,estudiar
+funcionario,0,5,3,viudo,18695,estudiar
+laboral,0,3,2,viudo,64467,conceder
+funcionario,1,2,1,viudo,37522,estudiar
+parado,2,2,1,casado,33050,no conceder
+parado,1,5,3,divorciado,51770,estudiar
+,2,2,0,viudo,14463,estudiar
+funcionario,1,2,2,viudo,0,no conceder
+funcionario,0,3,0,divorciado,80622,conceder
+funcionario,0,2,2,viudo,32860,estudiar
+laboral,0,3,0,soltero,38264,estudiar
+jubilado,1,2,0,casado,43852,estudiar
+parado,1,2,1,viudo,17615,no conceder
+funcionario,0,6,0,casado,21517,conceder
+funcionario,1,2,0,soltero,38834,conceder
+parado,1,2,0,viudo,29773,estudiar
+laboral,3,2,3,casado,15834,estudiar
+laboral,2,2,1,soltero,28466,estudiar
+jubilado,0,3,4,divorciado,29458,conceder
+funcionario,2,3,0,divorciado,77677,conceder
+jubilado,3,3,1,viudo,14835,no conceder
+funcionario,2,3,0,soltero,15919,estudiar
+jubilado,0,2,3,casado,74625,estudiar
+funcionario,1,4,0,divorciado,34395,estudiar
+laboral,1,2,0,divorciado,37317,estudiar
+laboral,1,3,2,,31701,conceder
+funcionario,3,7,2,viudo,21168,conceder
+parado,2,3,1,divorciado,80150,estudiar
+parado,0,3,5,soltero,,estudiar
+jubilado,0,2,2,divorciado,0,no conceder
+parado,0,2,3,divorciado,23906,conceder
+parado,0,3,1,viudo,55307,estudiar
+,1,3,0,viudo,34418,estudiar
+laboral,0,3,3,soltero,0,no conceder
+parado,0,3,2,divorciado,28958,no conceder
+laboral,1,3,4,casado,14606,no conceder
+jubilado,0,2,1,casado,54806,estudiar
+parado,4,2,1,viudo,81165,estudiar
+parado,0,2,0,divorciado,75142,estudiar
+laboral,1,4,4,soltero,21567,estudiar
+laboral,1,2,1,divorciado,32425,estudiar
+parado,5,4,0,casado,30847,no conceder
+funcionario,4,5,1,casado,12434,no conceder
+funcionario,1,2,0,soltero,16221,conceder
+parado,3,3,0,soltero,78393,estudiar
+funcionario,3,2,0,viudo,19131,no conceder
+parado,1,3,2,divorciado,13884,no conceder
+parado,0,4,5,divorciado,25552,no conceder
+funcionario,1,5,4,casado,30029,conceder
+laboral,4,2,1,soltero,13881,estudiar
+laboral,2,5,1,viudo,57829,conceder
+jubilado,2,5,0,casado,89066,estudiar
+jubilado,0,3,0,divorciado,46810,estudiar
+parado,0,3,1,casado,17589,no conceder
+parado,1,5,2,soltero,16128,no conceder
+parado,0,3,1,soltero,15154,no conceder
+laboral,0,2,1,viudo,63600,conceder
+jubilado,7,2,0,divorciado,14329,no conceder
+funcionario,5,2,3,viudo,45513,conceder
+jubilado,0,4,1,viudo,,estudiar
+funcionario,3,4,2,soltero,25995,no conceder
+parado,1,3,0,divorciado,36622,no conceder
+jubilado,1,6,1,viudo,25604,conceder
+jubilado,0,3,3,viudo,18021,no conceder
+parado,0,5,0,divorciado,15134,no conceder
+funcionario,1,2,1,viudo,75608,conceder
+jubilado,1,3,2,soltero,0,no conceder
+funcionario,1,3,1,viudo,34599,conceder
+parado,3,2,0,soltero,81549,estudiar
+jubilado,0,2,0,soltero,57740,estudiar
+jubilado,7,2,3,casado,27305,conceder
+parado,3,3,1,viudo,32572,no conceder
+parado,2,2,1,,69715,estudiar
+,2,4,1,divorciado,25224,estudiar
+jubilado,1,5,1,casado,33547,conceder
+laboral,1,3,3,casado,67972,conceder
+parado,0,2,1,casado,36006,no conceder
+parado,0,3,0,soltero,86684,estudiar
+parado,0,5,3,soltero,54589,estudiar
+parado,1,2,1,casado,30474,estudiar
+parado,0,3,1,divorciado,0,no conceder
+parado,1,4,2,viudo,33898,conceder
+jubilado,1,2,3,soltero,26566,estudiar
+parado,1,5,3,viudo,42842,estudiar
+laboral,0,4,2,casado,14798,no conceder
+jubilado,7,2,1,viudo,65015,estudiar
+parado,0,3,1,divorciado,16583,no conceder
+funcionario,0,2,1,divorciado,64287,conceder
+laboral,1,4,1,soltero,27357,estudiar
+jubilado,1,4,2,soltero,26305,no conceder
+jubilado,2,4,2,soltero,,no conceder
+parado,1,2,2,viudo,56357,estudiar
+parado,1,5,1,viudo,30435,estudiar
+funcionario,1,3,1,casado,17842,conceder
+laboral,1,3,2,divorciado,17844,no conceder
+laboral,0,2,1,casado,19896,no conceder
+parado,2,4,0,casado,35485,conceder
+parado,1,3,1,divorciado,41055,estudiar
+laboral,1,4,1,soltero,14517,no conceder
+laboral,2,3,1,casado,13836,estudiar
+laboral,0,2,0,divorciado,86260,conceder
+parado,2,5,0,casado,44591,estudiar
+parado,1,2,3,casado,12676,no conceder
+funcionario,0,2,0,soltero,13619,conceder
+funcionario,0,2,1,viudo,25252,conceder
+funcionario,2,3,0,soltero,19618,conceder
+parado,2,2,3,viudo,14709,no conceder
+jubilado,0,2,2,soltero,21403,no conceder
+laboral,1,2,1,casado,76910,conceder
+parado,3,5,2,divorciado,17075,no conceder
+funcionario,1,2,2,divorciado,17409,no conceder
+jubilado,1,5,2,divorciado,81352,estudiar
+laboral,1,3,2,soltero,83803,conceder
+laboral,1,3,1,viudo,,conceder
+laboral,3,2,2,,27128,estudiar
+parado,0,2,1,viudo,86275,estudiar
+jubilado,0,2,0,casado,0,no conceder
+funcionario,3,3,2,soltero,83698,conceder
+laboral,0,3,3,casado,37952,conceder
+jubilado,1,3,1,divorciado,0,no conceder
+parado,1,2,1,soltero,84752,estudiar
+parado,7,2,0,viudo,64383,estudiar
+funcionario,0,3,4,soltero,24265,estudiar
+parado,0,3,4,casado,14088,no conceder
+funcionario,0,3,0,viudo,58336,conceder
+parado,2,4,0,viudo,37655,estudiar
+laboral,1,4,0,casado,14527,no conceder
+parado,1,3,1,divorciado,0,no conceder
+parado,3,3,2,viudo,16279,no conceder
+parado,1,4,0,soltero,,no conceder
+funcionario,3,3,0,viudo,28689,conceder
+jubilado,2,2,4,divorciado,21619,no conceder
+parado,0,3,1,divorciado,33749,no conceder
+funcionario,2,2,2,soltero,79679,conceder
+jubilado,2,3,3,viudo,12788,no conceder
+parado,1,2,2,casado,46872,estudiar
+parado,0,3,0,soltero,16456,no conceder
+parado,1,4,0,casado,29466,conceder
+funcionario,6,3,1,divorciado,32579,conceder
+funcionario,2,2,1,viudo,12358,conceder
+laboral,0,3,1,soltero,41123,conceder
+funcionario,1,4,1,soltero,17797,estudiar
+funcionario,0,2,0,soltero,12357,estudiar
+parado,1,4,3,casado,26039,no conceder
+jubilado,1,7,3,viudo,12390,no conceder
+jubilado,0,3,1,viudo,0,no conceder
+parado,1,3,0,soltero,16579,no conceder
+laboral,3,2,2,soltero,,estudiar
+laboral,0,3,0,soltero,21019,no conceder
+laboral,4,2,0,casado,33464,conceder
+laboral,2,4,0,,33593,estudiar
+laboral,0,5,3,divorciado,48569,conceder
+jubilado,0,6,3,casado,74399,estudiar
+parado,1,3,1,casado,78593,estudiar
+funcionario,2,5,0,viudo,38848,estudiar
+laboral,1,2,1,viudo,86229,conceder
+laboral,0,2,0,casado,34615,estudiar
+funcionario,5,6,4,casado,56800,conceder
+parado,1,5,0,soltero,0,no conceder
+funcionario,2,3,0,casado,33158,conceder
+laboral,0,3,1,divorciado,55570,conceder
+funcionario,2,4,1,divorciado,86171,conceder
+laboral,1,2,0,soltero,0,no conceder
+funcionario,2,2,3,viudo,18774,conceder
+laboral,0,3,0,divorciado,45863,conceder
+jubilado,1,3,1,viudo,,estudiar
+parado,2,3,1,casado,27214,estudiar
+laboral,0,2,0,casado,0,no conceder
+laboral,1,5,3,casado,22165,conceder
+funcionario,0,3,1,soltero,21197,no conceder
+funcionario,1,2,1,casado,23668,conceder
+jubilado,2,2,2,casado,0,no conceder
+parado,3,4,2,casado,20479,no conceder
+parado,0,2,2,casado,29062,no conceder
+jubilado,1,3,0,casado,23316,estudiar
+funcionario,2,3,0,soltero,77112,conceder
+jubilado,1,2,2,soltero,44098,estudiar
+funcionario,2,2,1,soltero,17465,no conceder
+jubilado,2,2,0,soltero,17220,no conceder
+funcionario,2,3,1,soltero,0,conceder
+laboral,2,3,1,divorciado,25915,estudiar
+laboral,1,2,1,soltero,68762,conceder
+funcionario,1,6,1,casado,84766,conceder
+funcionario,3,7,1,,30475,estudiar
+funcionario,0,2,1,casado,0,no conceder
+parado,0,2,1,casado,56872,estudiar
+laboral,0,3,1,divorciado,15356,no conceder
+parado,0,2,1,divorciado,66308,estudiar
+jubilado,2,5,2,divorciado,13700,no conceder
+jubilado,0,3,1,viudo,24192,conceder
+laboral,2,3,2,divorciado,72011,conceder
+laboral,2,2,1,divorciado,78937,conceder
+funcionario,0,2,2,divorciado,19396,no conceder
+parado,0,2,1,casado,84473,estudiar
+jubilado,0,2,0,soltero,19293,no conceder
+parado,2,4,0,divorciado,21407,no conceder
+jubilado,1,4,0,soltero,83628,estudiar
+laboral,1,2,1,divorciado,29868,conceder
+laboral,0,4,0,divorciado,71514,conceder
+laboral,2,4,0,soltero,33086,conceder
+parado,1,3,0,divorciado,82379,estudiar
+parado,0,4,2,divorciado,,estudiar
+funcionario,0,2,0,divorciado,12137,estudiar
+laboral,0,2,2,viudo,0,no conceder
+jubilado,0,2,0,viudo,0,no conceder
+jubilado,0,2,3,casado,69313,estudiar
+jubilado,3,3,1,soltero,70926,estudiar
+laboral,0,7,3,divorciado,14856,no conceder
+jubilado,3,2,0,viudo,15214,no conceder
+parado,0,3,1,viudo,29146,no conceder
+jubilado,0,4,1,casado,33588,conceder
+parado,0,7,1,viudo,81959,estudiar
+funcionario,1,2,3,viudo,12202,conceder
+jubilado,1,3,0,viudo,30126,estudiar
+jubilado,4,3,2,viudo,18036,no conceder
+jubilado,2,5,0,divorciado,67952,estudiar
+laboral,2,3,2,viudo,33481,no conceder
+parado,2,2,3,soltero,33314,conceder
+jubilado,1,3,0,divorciado,31496,no conceder
+laboral,1,2,2,casado,45731,conceder
+parado,6,3,0,casado,17908,no conceder
+laboral,3,2,1,soltero,84684,conceder
+laboral,0,2,1,viudo,28520,conceder
+laboral,0,2,1,,24979,estudiar
+funcionario,0,3,2,divorciado,16093,conceder
+jubilado,0,7,3,viudo,38204,no conceder
+parado,1,4,0,casado,16074,no conceder
+laboral,1,3,0,viudo,22284,estudiar
+funcionario,0,4,0,divorciado,52226,conceder
+laboral,0,4,0,divorciado,29804,no conceder
+parado,4,3,2,casado,,no conceder
+parado,1,4,0,divorciado,36052,estudiar
+laboral,0,3,3,viudo,14502,no conceder
+funcionario,5,2,0,viudo,15592,estudiar
+funcionario,3,5,0,casado,47384,conceder
+laboral,2,2,2,viudo,88826,conceder
+laboral,1,2,0,viudo,12778,no conceder
+funcionario,3,2,1,viudo,57488,conceder
+laboral,1,3,2,viudo,66809,conceder
+laboral,4,4,1,viudo,89688,conceder
+parado,1,5,3,soltero,26962,estudiar
+jubilado,0,3,2,viudo,18517,no conceder
+funcionario,0,2,1,divorciado,18880,conceder
+parado,1,3,0,viudo,72202,estudiar
+parado,2,2,0,divorciado,16077,no conceder
+jubilado,5,2,1,soltero,15818,no conceder
+funcionario,0,4,0,casado,87332,conceder
+jubilado,0,2,0,casado,74680,estudiar
+funcionario,2,2,3,divorciado,23280,no conceder
+funcionario,1,4,1,soltero,49981,conceder
+parado,3,2,0,viudo,15313,no conceder
+laboral,0,2,0,divorciado,15950,no conceder
+,3,3,1,viudo,34163,estudiar
+parado,1,2,2,divorciado,19670,no conceder
+laboral,2,3,1,soltero,84375,conceder
+parado,4,2,0,soltero,20133,no conceder
+funcionario,1,5,1,soltero,20429,estudiar
+funcionario,0,2,2,soltero,77993,conceder
+funcionario,1,2,0,casado,26271,conceder
+funcionario,2,2,0,divorciado,15629,no conceder
+parado,0,2,4,casado,59400,estudiar
+jubilado,0,2,2,casado,0,no conceder
+parado,1,3,0,,52465,estudiar
+laboral,3,2,0,soltero,33592,estudiar
+parado,0,3,0,viudo,35890,conceder
+funcionario,1,2,1,casado,26880,estudiar
+laboral,1,2,0,casado,27005,conceder
+jubilado,1,3,1,divorciado,29433,estudiar
+parado,1,4,0,viudo,,conceder
+laboral,2,2,2,viudo,29464,estudiar
+funcionario,0,2,1,viudo,73966,conceder
+jubilado,3,3,0,viudo,14369,no conceder
+jubilado,1,2,1,divorciado,13549,no conceder
+funcionario,1,2,1,viudo,0,conceder
+jubilado,2,3,0,casado,16799,no conceder
+jubilado,1,2,1,divorciado,0,no conceder
+laboral,0,2,1,soltero,32876,conceder
+laboral,2,2,1,viudo,49535,conceder
+laboral,2,5,1,divorciado,50432,conceder
+jubilado,1,3,1,casado,15588,no conceder
+parado,2,5,0,soltero,36758,estudiar
+jubilado,0,3,1,viudo,19255,no conceder
+parado,4,2,3,divorciado,35531,conceder
+jubilado,2,2,2,casado,14032,no conceder
+,1,2,0,casado,28966,conceder
+parado,1,3,3,soltero,22031,conceder
+parado,1,2,2,casado,32921,conceder
+jubilado,6,3,1,viudo,15342,no conceder
+parado,0,3,2,soltero,84907,estudiar
+funcionario,2,3,0,casado,33377,estudiar
+laboral,4,3,2,,20964,conceder
+funcionario,1,3,0,viudo,52322,conceder
+jubilado,0,2,3,viudo,39724,no conceder
+jubilado,3,5,0,soltero,29723,conceder
+parado,3,2,0,casado,15426,no conceder
+parado,1,4,0,soltero,13593,no conceder
+laboral,3,5,2,divorciado,84520,conceder
+jubilado,0,3,1,casado,,estudiar
+funcionario,1,2,0,casado,14785,no conceder
+jubilado,1,4,1,soltero,15863,no conceder
+jubilado,6,2,0,soltero,41346,estudiar
+jubilado,0,2,2,soltero,25515,conceder
+funcionario,0,7,3,casado,18844,estudiar
+jubilado,2,2,0,divorciado,33427,conceder
+funcionario,1,3,3,soltero,19880,estudiar
+jubilado,4,3,0,soltero,21119,no conceder
+laboral,1,3,4,casado,80693,conceder
+laboral,3,4,3,soltero,39838,no conceder
+jubilado,2,5,0,casado,25410,no conceder
+parado,0,5,2,viudo,50051,estudiar
+funcionario,2,3,1,divorciado,36651,estudiar
+jubilado,1,3,3,viudo,15692,no conceder
+laboral,2,3,2,divorciado,30428,conceder
+funcionario,3,3,1,viudo,29525,estudiar
+jubilado,0,3,1,soltero,17189,no conceder
+funcionario,2,2,2,,16704,no conceder
+laboral,0,2,0,soltero,64852,conceder
+laboral,0,2,0,casado,61711,conceder
+jubilado,7,2,1,soltero,22803,estudiar
+funcionario,1,5,1,viudo,18883,no conceder
+jubilado,2,2,3,casado,44307,estudiar
+parado,0,3,2,viudo,87701,estudiar
+jubilado,0,3,0,soltero,74535,estudiar
+funcionario,0,2,0,casado,12805,estudiar
+jubilado,6,2,2,viudo,67090,estudiar
+funcionario,1,7,1,casado,38951,estudiar
+funcionario,1,3,2,casado,37791,estudiar
+jubilado,1,2,3,divorciado,32409,no conceder
+parado,2,4,2,soltero,14635,no conceder
+parado,1,3,1,viudo,33850,conceder
+jubilado,0,5,1,divorciado,51735,estudiar
+funcionario,4,2,0,soltero,29485,estudiar
+funcionario,2,2,5,viudo,49679,conceder
+funcionario,0,2,2,viudo,33883,conceder
+funcionario,0,7,0,divorciado,17092,no conceder
+laboral,0,3,1,casado,,no conceder
+funcionario,0,6,2,soltero,22332,conceder
+laboral,1,3,1,divorciado,17697,no conceder
+jubilado,7,3,2,viudo,74135,estudiar
+parado,3,3,3,casado,48105,estudiar
+parado,2,4,3,soltero,33508,no conceder
+laboral,0,4,2,casado,57274,conceder
+laboral,0,3,2,viudo,23186,no conceder
+jubilado,1,3,1,divorciado,83957,estudiar
+funcionario,2,3,0,divorciado,31719,conceder
+funcionario,3,6,1,viudo,15260,estudiar
+parado,1,4,0,soltero,54962,estudiar
+parado,1,4,0,divorciado,65368,estudiar
+laboral,0,2,0,divorciado,12645,no conceder
+parado,1,2,2,viudo,0,no conceder
+laboral,2,2,0,soltero,12878,estudiar
+parado,0,5,1,soltero,28467,no conceder
+parado,2,5,0,viudo,34225,no conceder
+laboral,2,3,1,casado,33321,estudiar
+jubilado,2,3,0,soltero,44757,estudiar
+jubilado,4,2,4,casado,69495,estudiar
+laboral,0,2,0,soltero,12462,no conceder
+funcionario,3,3,1,divorciado,26413,estudiar
+parado,1,2,0,casado,20641,no conceder
+laboral,0,3,0,divorciado,34935,estudiar
+laboral,3,4,1,casado,41288,conceder
+parado,0,3,0,casado,23427,conceder
+jubilado,2,2,1,divorciado,27014,no conceder
+parado,0,3,0,divorciado,20895,no conceder
+laboral,2,2,0,soltero,63910,conceder
+jubilado,3,5,2,soltero,53106,estudiar
+,6,2,2,soltero,19125,estudiar
+funcionario,0,3,1,casado,30149,no conceder
+laboral,1,3,0,casado,36655,estudiar
+jubilado,1,2,2,viudo,23689,no conceder
+parado,6,4,0,soltero,85408,estudiar
+funcionario,2,5,1,soltero,84812,conceder
+jubilado,1,2,1,divorciado,37127,no conceder
+funcionario,0,6,1,soltero,42368,conceder
+funcionario,5,3,0,soltero,67683,conceder
+jubilado,1,3,0,viudo,85429,estudiar
+laboral,0,2,2,divorciado,33794,estudiar
+parado,1,3,0,viudo,60444,estudiar
+laboral,0,2,1,soltero,25662,no conceder
+laboral,1,5,2,soltero,13817,no conceder
+laboral,2,3,1,casado,12027,estudiar
+funcionario,1,5,1,viudo,76458,conceder
+parado,0,2,0,divorciado,12231,no conceder
+laboral,1,5,0,casado,13584,no conceder
+funcionario,0,3,2,casado,30103,conceder
+laboral,1,3,1,divorciado,73735,conceder
+laboral,3,3,1,divorciado,12872,estudiar
+funcionario,1,6,0,viudo,17646,conceder
+funcionario,0,2,0,divorciado,36131,conceder
+funcionario,1,2,2,divorciado,18663,conceder
+laboral,2,4,0,casado,20330,estudiar
+jubilado,1,2,0,viudo,15202,estudiar
+laboral,2,2,1,casado,20313,conceder
+laboral,3,5,1,casado,66869,conceder
+parado,0,2,3,divorciado,64986,estudiar
+parado,1,4,1,casado,27078,conceder
+laboral,1,3,1,casado,28604,estudiar
+laboral,1,2,5,divorciado,13661,no conceder
+laboral,1,6,1,soltero,20562,conceder
+jubilado,1,3,2,casado,34127,conceder
+parado,0,2,1,viudo,14263,no conceder
+parado,2,2,0,viudo,60394,estudiar
+funcionario,0,4,0,soltero,37408,estudiar
+funcionario,0,2,1,viudo,15725,estudiar
+funcionario,0,3,0,soltero,0,no conceder
+jubilado,0,4,0,soltero,12829,no conceder
+parado,0,2,0,divorciado,40939,estudiar
+jubilado,2,2,1,casado,16501,no conceder
+funcionario,1,4,3,viudo,56785,conceder
+laboral,1,2,0,divorciado,12988,no conceder
+laboral,1,2,2,soltero,0,no conceder
+jubilado,0,3,5,soltero,14229,no conceder
+parado,0,3,1,viudo,0,no conceder
+funcionario,1,5,0,viudo,16913,no conceder
+parado,0,2,2,soltero,20578,conceder
+parado,0,5,0,soltero,78294,estudiar
+parado,0,3,2,viudo,18636,no conceder
+jubilado,0,2,2,soltero,49446,estudiar
+jubilado,1,2,0,soltero,86668,estudiar
+parado,0,2,1,casado,30865,conceder
+laboral,0,3,3,casado,80429,conceder
+parado,1,3,1,soltero,26218,no conceder
+laboral,0,3,0,soltero,38878,conceder
+funcionario,1,2,3,casado,88365,conceder
+funcionario,3,2,3,divorciado,17778,conceder
+jubilado,0,2,2,divorciado,0,no conceder
+parado,1,2,0,soltero,20460,conceder
+jubilado,0,2,3,viudo,77807,estudiar
+funcionario,4,3,1,viudo,48175,conceder
+parado,0,5,1,soltero,39299,no conceder
+laboral,0,2,1,soltero,16348,no conceder
+laboral,3,2,3,casado,28644,no conceder
+laboral,2,2,0,viudo,,estudiar
+laboral,1,2,3,divorciado,14452,no conceder
+funcionario,1,2,2,soltero,27375,estudiar
+jubilado,3,3,0,soltero,14731,no conceder
+jubilado,3,5,0,casado,14406,no conceder
+laboral,0,3,2,soltero,51919,conceder
+funcionario,0,5,1,casado,64085,conceder
+laboral,0,2,1,soltero,38820,estudiar
+laboral,1,7,4,divorciado,20703,estudiar
+funcionario,3,2,0,casado,18912,estudiar
+laboral,6,3,0,viudo,16547,estudiar
+laboral,1,2,1,casado,59600,conceder
+jubilado,0,2,3,divorciado,78413,estudiar
+laboral,2,2,0,divorciado,79250,conceder
+jubilado,1,4,0,soltero,67569,estudiar
+laboral,0,3,0,soltero,81983,conceder
+parado,3,5,1,soltero,89813,estudiar
+parado,7,2,0,casado,34785,estudiar
+funcionario,2,3,2,viudo,83620,conceder
+jubilado,2,2,5,divorciado,17249,no conceder
+jubilado,2,3,0,casado,37719,conceder
+laboral,1,2,1,soltero,38116,estudiar
+laboral,1,2,2,soltero,76984,conceder
+parado,0,2,0,soltero,34740,estudiar
+parado,0,3,3,soltero,20578,no conceder
+laboral,4,4,2,viudo,12424,estudiar
+jubilado,3,3,0,viudo,39263,estudiar
+funcionario,1,2,1,soltero,35786,conceder
+jubilado,1,4,1,soltero,20313,conceder
+parado,0,4,0,viudo,88158,estudiar
+parado,2,6,0,divorciado,15497,no conceder
+laboral,0,2,1,divorciado,20682,estudiar
+funcionario,1,3,1,divorciado,14363,conceder
+laboral,1,2,0,soltero,17448,no conceder
+jubilado,2,2,2,viudo,19584,no conceder
+jubilado,0,3,4,casado,0,no conceder
+laboral,5,3,2,divorciado,12860,estudiar
+parado,2,3,0,divorciado,0,no conceder
+laboral,3,2,1,divorciado,20178,conceder
+funcionario,1,2,3,casado,12739,estudiar
+funcionario,1,4,0,divorciado,13254,conceder
+funcionario,2,2,3,viudo,28893,estudiar
+laboral,0,5,0,soltero,49954,conceder
+funcionario,0,2,0,divorciado,17979,conceder
+parado,3,2,3,viudo,88480,estudiar
+jubilado,2,2,0,casado,42721,estudiar
+parado,1,3,5,viudo,,no conceder
+laboral,3,5,1,viudo,14947,estudiar
+laboral,1,2,3,viudo,32582,estudiar
+jubilado,0,2,0,viudo,29320,no conceder
+parado,1,5,0,casado,19622,no conceder
+funcionario,1,3,1,casado,43868,conceder
+laboral,0,2,1,divorciado,84034,conceder
+jubilado,1,2,0,soltero,39373,no conceder
+funcionario,0,4,1,soltero,74970,conceder
+laboral,0,4,1,casado,13463,no conceder
+laboral,3,5,1,casado,18129,estudiar
+parado,1,3,0,casado,86445,estudiar
+funcionario,2,3,3,divorciado,46475,conceder
+jubilado,2,3,1,viudo,89355,estudiar
+laboral,1,3,0,viudo,19730,no conceder
+funcionario,1,2,1,divorciado,73419,conceder
+jubilado,1,4,3,viudo,59510,estudiar
+funcionario,0,3,3,soltero,26791,no conceder
+jubilado,1,2,0,divorciado,81788,estudiar
+jubilado,0,2,0,casado,26388,no conceder
+parado,0,3,1,divorciado,35051,no conceder
+laboral,0,2,3,casado,20254,no conceder
+jubilado,1,2,0,divorciado,31750,conceder
+jubilado,0,2,0,soltero,16978,no conceder
+parado,0,6,0,casado,25356,no conceder
+parado,1,3,1,casado,24035,no conceder
+jubilado,1,6,0,soltero,14699,no conceder
+parado,7,2,2,casado,17919,no conceder
+funcionario,0,3,1,viudo,23165,no conceder
+jubilado,2,2,2,viudo,27285,no conceder
+jubilado,2,3,1,viudo,81181,estudiar
+jubilado,5,7,2,soltero,31482,conceder
+parado,6,3,1,divorciado,17215,no conceder
+laboral,3,2,0,soltero,71159,conceder
+jubilado,0,2,2,viudo,59299,estudiar
+laboral,1,4,0,soltero,20832,estudiar
+jubilado,7,2,0,viudo,22258,no conceder
+jubilado,0,5,1,soltero,74255,estudiar
+funcionario,0,2,4,casado,32391,estudiar
+jubilado,3,6,0,divorciado,29566,no conceder
+parado,3,5,1,casado,42331,estudiar
+jubilado,0,3,1,viudo,32784,no conceder
+parado,3,2,1,soltero,26391,conceder
+jubilado,2,3,0,viudo,33042,conceder
+jubilado,2,2,0,casado,37025,estudiar
+funcionario,1,2,0,casado,54644,conceder
+funcionario,1,2,4,casado,53393,conceder
+jubilado,0,3,0,casado,52669,estudiar
+funcionario,1,5,0,casado,30952,estudiar
+jubilado,1,3,0,casado,,estudiar
+laboral,0,2,3,soltero,31481,no conceder
+funcionario,2,4,0,soltero,36999,estudiar
+parado,2,2,1,viudo,16199,no conceder
+funcionario,3,5,1,soltero,14321,estudiar
+jubilado,0,4,4,viudo,21047,conceder
+laboral,1,4,1,soltero,65366,conceder
+laboral,0,2,0,casado,12640,no conceder
+laboral,1,2,2,viudo,15011,no conceder
+laboral,1,4,0,divorciado,43624,conceder
+parado,1,2,2,divorciado,12124,no conceder
+laboral,1,2,1,divorciado,84563,conceder
+funcionario,1,4,1,casado,0,estudiar
+funcionario,0,5,1,divorciado,12817,estudiar
+laboral,1,2,5,casado,0,no conceder
+parado,1,2,1,divorciado,23771,no conceder
+laboral,1,3,1,viudo,73558,conceder
+laboral,2,4,0,viudo,29194,estudiar
+parado,0,4,1,soltero,88998,estudiar
+jubilado,0,4,1,casado,0,no conceder
+jubilado,1,2,1,soltero,71193,estudiar
+parado,1,2,0,divorciado,,no conceder
+funcionario,1,2,0,viudo,23743,conceder
+funcionario,6,3,5,divorciado,39638,conceder
