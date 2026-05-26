@@ -82,7 +82,6 @@ import math
 import random
 import numpy as np
 
-#Añadimos una semilla para poder obtener siempre los mismo resultados
 random.seed(42)
 np.random.seed(42)
 
@@ -249,27 +248,18 @@ from datos_trabajo_aia.carga_datos import *
 
 
 def particion_entr_prueba(X, y, test=0.20):
-    """
-    Divide X e y en entrenamiento y prueba de forma aleatoria y estratificada.
-    Para cada clase, se selecciona aleatoriamente una proporción 'test' de sus
-    índices para prueba y el resto para entrenamiento. Se mantiene el orden
-    relativo original dentro de cada partición.
-    """
     clases = np.unique(y)
     indices_entr = []
     indices_prueba = []
 
     for clase in clases:
-        # Índices de los ejemplos de esta clase
         idx_clase = np.where(y == clase)[0]
         n_prueba = round(len(idx_clase) * test)
-        # Mezcla aleatoria de los índices de esta clase
         idx_mezclado = idx_clase.copy()
         np.random.shuffle(idx_mezclado)
         indices_prueba.extend(idx_mezclado[:n_prueba])
         indices_entr.extend(idx_mezclado[n_prueba:])
 
-    # Ordenar para preservar el orden original
     indices_entr = sorted(indices_entr)
     indices_prueba = sorted(indices_prueba)
 
@@ -461,8 +451,6 @@ class Nodo:
 class ClasificadorNoEntrenado(Exception): pass
 
 
-# ---- Funciones auxiliares para ganancia de información ----
-
 def _entropia(y):
     n = len(y)
     if n == 0:
@@ -483,7 +471,6 @@ def _ganancia(y, y_izq, y_der):
 
 
 def _umbrales_candidatos(vals, etiquetas):
-    """Puntos medios entre valores consecutivos con cambio de clase."""
     orden = np.argsort(vals)
     vals_ord = vals[orden]
     ets_ord = etiquetas[orden]
@@ -904,7 +891,6 @@ class RandomForest:
         n = X.shape[0]
         n_muestras = max(1, round(n * self.prop_muestras))
         for _ in range(self.n_arboles):
-            # Muestra con reemplazo (bagging)
             idx = np.random.choice(n, size=n_muestras, replace=True)
             X_boot = X[idx]
             y_boot = y[idx]
@@ -922,7 +908,6 @@ class RandomForest:
             raise ClasificadorNoEntrenado("El Random Forest no ha sido entrenado.")
         # Cada árbol clasifica cada ejemplo; votación mayoritaria
         predicciones = np.array([arbol.clasifica(X) for arbol in self.arboles])
-        # predicciones shape: (n_arboles, n_ejemplos)
         resultado = []
         for j in range(X.shape[0]):
             votos = predicciones[:, j]
@@ -1000,7 +985,6 @@ X_adult = df_adult.iloc[:, :-1].values
 y_adult = df_adult.iloc[:, -1].values
 
 enc_adult = OrdinalEncoder()
-# Solo aplicar OrdinalEncoder a las columnas desde la 5ª en adelante (índice 4)
 X_adult_enc = X_adult.copy().astype(object)
 X_adult_enc[:, 4:] = enc_adult.fit_transform(X_adult[:, 4:])
 X_adult_enc = X_adult_enc.astype(float)
@@ -1013,20 +997,14 @@ X_train_adult, X_test_adult, y_train_adult, y_test_adult = \
 #   conteniendo el dataset de los dígitos escritos a mano:
 
 def carga_digitos(fichero_imgs, fichero_labels):
-    """
-    Lee imágenes de 28x28 píxeles en formato texto (espacios=blanco, +/#=negro)
-    y sus etiquetas de clasificación. Devuelve arrays numpy (n, 784) y (n,).
-    """
     with open(fichero_imgs, 'r') as f:
         lineas = f.readlines()
-    # Cada imagen ocupa 28 líneas. Rellenar hasta múltiplo de 28.
     imgs = []
     i = 0
     while i + 28 <= len(lineas):
         bloque = lineas[i:i+28]
         fila = []
         for linea in bloque:
-            # Asegurar que la línea tiene exactamente 28 caracteres
             linea = linea.rstrip('\n')
             linea = linea.ljust(28)[:28]
             for c in linea:
@@ -1047,7 +1025,6 @@ X_test_dg, y_test_dg = carga_digitos(
     "datos_trabajo_aia/datos/digitdata/testimages",
     "datos_trabajo_aia/datos/digitdata/testlabels")
 
-# Para el entrenamiento final del RF, unimos entrenamiento y validación
 X_train_dg = np.concatenate([X_entr_dg, X_val_dg])
 y_train_dg = np.concatenate([y_entr_dg, y_val_dg])
 
@@ -1122,17 +1099,12 @@ def grid_search_rf(X_entr, y_entr, X_val, y_val, grid=grid_rf):
     return mejor_params, mejor_rend, clf_final
 
 
-"""
-
-# ========= CALCULO DE HIPERPARÁMETROS =========
 
 X_train_imdb, X_val_imdb, y_train_imdb, y_val_imdb = particion_entr_prueba(X_train_imdb, y_train_imdb, test=0.2)
 X_train_credito, X_val_credito, y_train_credito, y_val_credito = particion_entr_prueba(X_train_credito, y_train_credito, test=0.2)
 X_train_adult, X_val_adult, y_train_adult, y_val_adult = particion_entr_prueba(X_train_adult, y_train_adult, test=0.2)
 
 
-
-# ========= IMDB =========
 
 best_params_imdb, best_val_imdb, RF_IMDB = grid_search_rf(
     X_train_imdb, y_train_imdb, X_val_imdb, y_val_imdb)
@@ -1141,13 +1113,8 @@ print("\n\nMEJORES HIPERPARÁMETROS Y RENDIMIENTOS EN VALIDACIÓN PARA DATASET I
 print(f"Mejores hiperparámetros: {best_params_imdb}")
 print(f"Mejor rendimiento en validación: {best_val_imdb}")
 
-# Resultados obtenidos:
-# Mejores hiperparámetros: {'n_arboles': 5, 'prop_muestras': 0.7, 'min_ejemplos_nodo_interior': 5, 'max_prof': 10, 'n_atrs': 5, 'prop_umbral': 0.8}
-# Mejor rendimiento en validación: 0.5725
 
 
-
-# ========= CREDITO =========
 
 best_params_credito, best_val_credito, RF_CREDITO = grid_search_rf(
     X_train_credito, y_train_credito, X_val_credito, y_val_credito)
@@ -1156,13 +1123,9 @@ print("\n\nMEJORES HIPERPARÁMETROS Y RENDIMIENTOS EN VALIDACIÓN PARA DATASET C
 print(f"Mejores hiperparámetros: {best_params_credito}")
 print(f"Mejor rendimiento en validación: {best_val_credito}")
 
-# Resultados obtenidos:
-# Mejores hiperparámetros: {'n_arboles': 5, 'prop_muestras': 0.7, 'min_ejemplos_nodo_interior': 5, 'max_prof': 5, 'n_atrs': 5, 'prop_umbral': 0.8}
-# Mejor rendimiento en validación: 0.6407766990291263
 
 
 
-# ========= ADULT =========
 
 best_params_adult, best_val_adult, RF_ADULT = grid_search_rf(
     X_train_adult, y_train_adult, X_val_adult, y_val_adult)
@@ -1171,28 +1134,15 @@ print("\n\nMEJORES HIPERPARÁMETROS Y RENDIMIENTOS EN VALIDACIÓN PARA DATASET A
 print(f"Mejores hiperparámetros: {best_params_adult}")
 print(f"Mejor rendimiento en validación: {best_val_adult}")
 
-# Resultados obtenidos:
-# Mejores hiperparámetros: {'n_arboles': 3, 'prop_muestras': 0.7, 'min_ejemplos_nodo_interior': 5, 'max_prof': 10, 'n_atrs': 5, 'prop_umbral': 0.8}
-# Mejor rendimiento en validación: 0.8385796545105566
 
 
 
-# ========= DIGIT =========
 
 best_params_dg, best_val_dg, RF_DG = grid_search_rf(
     X_train_dg, y_train_dg, X_val_dg, y_val_dg)
 print("\n\nMEJORES HIPERPARÁMETROS Y RENDIMIENTOS EN VALIDACIÓN PARA DATASET DG:\n")
 print(f"Mejores hiperparámetros: {best_params_dg}")
 print(f"Mejor rendimiento en validación: {best_val_dg}")
-
-# Resultados obtenidos:
-# Mejores hiperparámetros: {'n_arboles': 3, 'prop_muestras': 0.7, 'min_ejemplos_nodo_interior': 5, 'max_prof': 5, 'n_atrs': 5, 'prop_umbral': 0.8}
-# Mejor rendimiento en validación: 0.319
-
-
-"""
-
-
 
 
 # ********************************************************************************
